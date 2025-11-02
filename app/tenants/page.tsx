@@ -22,11 +22,6 @@ export default function TenantsPage() {
       .finally(() => setLoading(false));
   }, []);
   return (
-    <div>
-      loaded
-    </div>
-  )
-  return (
     <div className="p-8">
       <h1 className="text-2xl font-semibold mb-6">Tenants</h1>
       {loading ? (
