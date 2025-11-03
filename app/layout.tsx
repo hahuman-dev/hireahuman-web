@@ -24,14 +24,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 							<TenantSelect />
 
 							<nav className="flex flex-col gap-2 text-sm">
-								<Link href="/tenants" className="hover:bg-slate-800 rounded px-3 py-2">
-									Tenants
-								</Link>
 								<Link href="/services" className="hover:bg-slate-800 rounded px-3 py-2">
 									Services
 								</Link>
 								<Link href="/bookings" className="hover:bg-slate-800 rounded px-3 py-2">
 									Bookings
+								</Link>
+							</nav>
+							<nav className="flex flex-col gap-2 text-sm">
+								<hr />
+								<Link href="/tenants" className="hover:bg-slate-800 rounded px-3 py-2">
+									Admin Tenant View
 								</Link>
 							</nav>
 
