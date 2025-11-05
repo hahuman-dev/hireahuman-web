@@ -72,7 +72,7 @@ export default function LoginPage() {
         </form>
 
         <div className="mt-6 text-xs text-gray-500">
-          Demo creds: <span className="text-gray-300">{DEMO_EMAIL}</span> / <span className="text-gray-300">{DEMO_PASS}</span>
+          {/* Demo creds: <span className="text-gray-300">{DEMO_EMAIL}</span> / <span className="text-gray-300">{DEMO_PASS}</span> */}
         </div>
       </div>
     </div>
