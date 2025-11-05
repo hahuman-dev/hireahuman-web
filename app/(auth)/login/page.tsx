@@ -15,6 +15,14 @@ export default function LoginPage() {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim() === DEMO_EMAIL && password === DEMO_PASS) {
+      // after successful check
+      document.cookie = [
+        "hah_auth=ok",
+        "Path=/",
+        "Max-Age=2592000",     // 30 days
+        "SameSite=Lax",
+        "Secure"               // keep for HTTPS; remove locally if needed
+      ].join("; ");
       localStorage.setItem("hah_auth", "ok");
       router.replace("/tenants"); // go to app
     } else {
