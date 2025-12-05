@@ -76,7 +76,7 @@ export function ThemeSettings({ tenantId }: { tenantId: string }) {
     setSaved(false);
 
     try {
-      const res = await fetch(`${apiBase}/api/tenants/${tenantId}/theme`, {
+      const res = await fetch(`${apiBase}/tenants/${tenantId}/theme`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(theme),
