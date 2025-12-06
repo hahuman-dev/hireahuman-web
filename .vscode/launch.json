@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js dev (debug + browser)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "development",
+        "CHOKIDAR_USEPOLLING": "1",
+        "PORT": "3000",
+        "CHOKIDAR_INTERVAL": "200"
+      },
+      "autoAttachChildProcesses": true,
+      "restart": true,
+      "serverReadyAction": {
+        // <- this is the important bit
+        "pattern": "ready - started server on .+:(\\d+)",
+        "uriFormat": "http://localhost:%s",
+        "action": "openExternally"
+      }
+    }
+  ]
+}
